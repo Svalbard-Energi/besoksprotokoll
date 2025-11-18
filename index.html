@@ -50,8 +50,8 @@
           const element = document.currentScript.parentElement;
 
           Promise.all([
-            import("/_app/immutable/entry/start.BDWI1HS1.js"),
-            import("/_app/immutable/entry/app.DxPwvglg.js"),
+            import("/besoksprotokoll/_app/immutable/entry/start.BDWI1HS1.js"),
+            import("/besoksprotokoll/_app/immutable/entry/app.DxPwvglg.js"),
           ]).then(([kit, app]) => {
             kit.start(app, element);
           });
