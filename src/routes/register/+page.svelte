@@ -3,6 +3,7 @@
 	import { confetti } from '@neoconfetti/svelte';
 	import { tick } from 'svelte';
 	import { resolve } from '$app/paths';
+	import { innerHeight } from 'svelte/reactivity/window';
 
 	const wait = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
@@ -19,7 +20,7 @@
 
 {#if isVisible}
 	<div>
-		<div use:confetti></div>
+		<div use:confetti={{ stageHeight: innerHeight.current ?? 1180 }}></div>
 	</div>
 {/if}
 
