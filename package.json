@@ -36,5 +36,13 @@
 		"typescript-eslint": "^8.46.1",
 		"vite": "^7.1.10",
 		"vite-plugin-devtools-json": "^1.0.0"
+	},
+	"dependencies": {
+		"@embedpdf/core": "^1.4.1",
+		"@embedpdf/engines": "^1.4.1",
+		"@embedpdf/plugin-loader": "^1.4.1",
+		"@embedpdf/plugin-render": "^1.4.1",
+		"@embedpdf/plugin-scroll": "^1.4.1",
+		"@embedpdf/plugin-viewport": "^1.4.1"
 	}
 }
