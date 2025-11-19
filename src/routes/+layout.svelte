@@ -1,5 +1,8 @@
 <script lang="ts">
+	import './layout.css';
+
 	let { children } = $props();
 </script>
-
-{@render children()}
+<main class="h-full">
+	{@render children()}
+</main>
