@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { relative } from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,12 +8,14 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
-			fallback: 'index.html'
-		})
+			pages: 'docs',
+			assets: 'docs',
+			fallback: '404.html'
+		}),
+		appDir: 'scripts'
 	},
 	paths: {
-		base: '/besoksprotokoll',
-		assets: "https://svalbard-energi.github.io/besoksprotokoll"
+		base: process.argv.includes('dev') ? '' : '/besoksprotokoll'
 	}
 };
 
