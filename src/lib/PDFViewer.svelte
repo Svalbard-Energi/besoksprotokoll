@@ -13,6 +13,7 @@
 	import { LoaderPluginPackage } from '@embedpdf/plugin-loader/svelte';
 	import { RenderLayer, RenderPluginPackage } from '@embedpdf/plugin-render/svelte';
 	import { base } from '$app/paths';
+	import { ZoomPluginPackage, ZoomMode } from '@embedpdf/plugin-zoom/svelte';
 
 	// 1. Initialize the engine with the Svelte store
 	const pdfEngine = usePdfiumEngine();
@@ -30,7 +31,11 @@
 		}),
 		createPluginRegistration(ViewportPluginPackage),
 		createPluginRegistration(ScrollPluginPackage),
-		createPluginRegistration(RenderPluginPackage)
+		createPluginRegistration(RenderPluginPackage),
+		createPluginRegistration(ZoomPluginPackage, {
+			// Set the initial zoom level when a document loads
+			defaultZoomLevel: ZoomMode.FitPage
+		})
 	];
 </script>
 
