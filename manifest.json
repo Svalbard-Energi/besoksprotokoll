@@ -1,7 +1,7 @@
 {
 	"name": "Besøksprokotoll | SEAS",
 	"shortName": "SEAS",
-	"start_url": "/",
+	"start_url": "/besoksprotokoll",
 	"display": "standalone",
 	"theme_color": "#092750",
 	"background_color": "#111111",
