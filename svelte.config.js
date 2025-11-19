@@ -13,7 +13,8 @@ const config = {
 		})
 	},
 	paths: {
-		base: '/besoksprotokoll'
+		base: '/besoksprotokoll',
+		assets: "https://svalbard-energi.github.io/besoksprotokoll"
 	}
 };
 
