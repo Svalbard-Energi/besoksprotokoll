@@ -8,7 +8,7 @@
 	"description": "Besøksprotokoll for SEAS",
 	"icons": [
 		{
-			"src": "/besoksprotokoll/assets/Icon.png",
+			"src": "Icon.png",
 			"sizes": "144x144",
 			"type": "image/png"
 		}

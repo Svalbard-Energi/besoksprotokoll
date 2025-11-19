@@ -4,59 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="/besoksprotokoll/manifest.json" />
-    <link rel="icon" href="/besoksprotokoll/Icon.png" />
-
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/entry/start.BDWI1HS1.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/chunks/BtJzUut9.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/chunks/BovqA5zf.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/chunks/DnkeOe0L.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/entry/app.DxPwvglg.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/chunks/CW8YZ50g.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/chunks/DDoxhlaG.js"
-    />
-    <link
-      rel="modulepreload"
-      href="/besoksprotokoll/_app/immutable/chunks/Dhg4dCd-.js"
-    />
+    <link rel="icon" href="/besoksprotokoll/assets/Icon.png" />
+    <script src="/besoksprotokoll/assets/testscript.js"></script>
   </head>
-  <body data-sveltekit-preload-data="hover">
-    <div style="display: contents">
-      <script>
-        {
-          __sveltekit_1m9hx0c = {
-            base: "",
-          };
-
-          const element = document.currentScript.parentElement;
-
-          Promise.all([
-            import("/besoksprotokoll/_app/immutable/entry/start.BDWI1HS1.js"),
-            import("/besoksprotokoll/_app/immutable/entry/app.DxPwvglg.js"),
-          ]).then(([kit, app]) => {
-            kit.start(app, element);
-          });
-        }
-      </script>
-    </div>
+  <body>
+    <h1>Test Besøksprotokoll</h1>
+    <embed
+      src="/besoksprotokoll/assets/test.pdf"
+      type="application/pdf"
+      width="100%"
+      height="500px"
+    />
   </body>
 </html>
