@@ -40,7 +40,7 @@
 	</div>
 {/snippet}
 
-<div style="height: 100%; border: 1px solid black;">
+<div class="pdf-container" style="border: 1px solid black;">
 	{#if pdfEngine.isLoading || !pdfEngine.engine}
 		<div class="loading-pane">Loading PDF Engine...</div>
 	{:else}
@@ -61,5 +61,12 @@
 	}
 	.viewport-class {
 		background-color: #f1f3f5;
+	}
+	.pdf-container {
+		flex: 1;
+		min-height: 0; /* super important for scrollable children in flex layouts */
+		border: 1px solid black;
+		display: flex; /* so children can do height:100% inside */
+		flex-direction: column;
 	}
 </style>
