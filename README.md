@@ -1,38 +1,64 @@
-# sv
+# Besøksprotokoll
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This repository is a SvelteKit app that is published to GitHub Pages using the `docs/` output folder.
 
-## Creating a project
+## GitHub Pages release setup
 
-If you're seeing this, you've probably already done this step. Congrats!
+The project uses `@sveltejs/adapter-static` to build a static site into `docs/`.
+
+Key configuration:
+- `svelte.config.js` sets `pages` and `assets` to `docs`
+- `svelte.config.js` sets `paths.base` to `/besoksprotokoll` for non-dev builds
+- GitHub Pages is intended to serve from the repository root using the `docs/` folder
+
+This means the published site is expected at:
+
+`https://Svalbard-Energi.github.io/besoksprotokoll`
+
+## Local development
+
+Install dependencies and start the dev server:
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Open the local URL shown in the terminal. Development builds do not use the GitHub Pages base path.
 
-To create a production version of your app:
+## Build for production
+
+Create the static build into `docs/`:
 
 ```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+After this command, the generated site files are available in `docs/`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Publish to GitHub Pages
+
+1. Run `npm run build`
+2. Commit the `docs/` folder and any other changes
+3. Push to the `main` branch
+
+On GitHub, ensure Pages is configured to use the `docs/` folder on the `main` branch.
+
+## Preview the production build locally
+
+You can preview the generated static site from `docs/` with a simple static server, for example:
+
+```sh
+npx serve docs
+```
+
+or using Vite preview if you want to check the build output:
+
+```sh
+npm run preview
+```
+
+## Notes
+
+- The `404.html` fallback file is configured in the SvelteKit adapter to support client-side routing on GitHub Pages.
+- The `base` path must match the repository name (`/besoksprotokoll`) for GitHub Pages deployment.
