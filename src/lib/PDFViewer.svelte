@@ -25,7 +25,7 @@
 				type: 'url',
 				pdfFile: {
 					id: 'HMS-pdf',
-					url: `${window.location.origin}${base}/test.pdf`
+					url: `${window.location.origin}${base}/hms_presentasjon.pdf`
 				}
 			}
 		}),
