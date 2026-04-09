@@ -29,7 +29,7 @@
 	<iframe
 		class="h-full"
 		title="Besøksprotokoll"
-		src="https://forms.office.com/Pages/ResponsePage.aspx?id=kAfOvZoOMk6H46LhSGvhwbXCj2A_N6ROpHGpez2MNg1UNVRWSDNXUUlLNEVDTVlCWE4wUElGRDg4WSQlQCN0PWcu&embed=true"
+		src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=dxgw9tkWiUS8fLbPubJUZcLsr4Wu0LdCo4acZmwku2JUNFc5MzFIWEpUOVVNQ1UxM0tURDlORTdJUS4u&embed=true"
 		frameborder="0"
 		marginwidth="0"
 		marginheight="0"
