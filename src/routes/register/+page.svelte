@@ -8,12 +8,14 @@
 	const wait = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 	let isVisible = $state(false);
-
+	let confettiEnabled = $state(false);
 	async function onClick() {
-		isVisible = false;
-		await tick();
-		isVisible = true;
-		await wait(5000);
+		if (confettiEnabled) {
+			isVisible = false;
+			await tick();
+			isVisible = true;
+			await wait(3000);
+		}
 		goto(resolve('/'));
 	}
 </script>
