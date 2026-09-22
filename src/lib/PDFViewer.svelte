@@ -14,6 +14,7 @@
 	import { RenderLayer, RenderPluginPackage } from '@embedpdf/plugin-render/svelte';
 	import { base } from '$app/paths';
 	import { ZoomPluginPackage, ZoomMode } from '@embedpdf/plugin-zoom/svelte';
+	import hmsPdf from "$lib/assets/hms_intro.pdf"
 
 	// 1. Initialize the engine with the Svelte store
 	const pdfEngine = usePdfiumEngine();
@@ -25,7 +26,7 @@
 				type: 'url',
 				pdfFile: {
 					id: 'HMS-pdf',
-					url: `${window.location.origin}${base}/hms_intro_3.pdf`
+					url: hmsPdf
 				}
 			}
 		}),
